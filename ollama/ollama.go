@@ -23,10 +23,7 @@ func GetPrompt() string{
 func OllamaServe(){
     // Start local ollama server 
     cmd := exec.Command("ollama", "serve")
-    _, err := cmd.CombinedOutput()
-    if err != nil{
-        fmt.Println(err)
-    }
+    cmd.Run()
 }
 
 
